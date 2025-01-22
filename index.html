@@ -51,7 +51,10 @@
         // Simulating broken JavaScript functionality
         try {
             // Intentional error: misspelled function name
-            
+            loaddynamicContent();
+        } catch (error) {
+            console.error("Critical functionality failed to load.", error);
+            document.getElementById("main-content").innerHTML = "<p style='color: red;'>Failed to load content. Please try again later.</p>";
         }
 
         // Correct function (intentionally not called)

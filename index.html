@@ -51,12 +51,13 @@
         // Simulating broken JavaScript functionality
         try {
             // Intentional error: misspelled function name
-            loaddynamicContent();
-        } 
+            
         }
 
         // Correct function (intentionally not called)
-        
+        function loadDynamicContent() {
+            const contentDiv = document.getElementById("main-content");
+            contentDiv.innerHTML = "<h2>Welcome to the dynamically loaded page!</h2><p>All content is now visible.</p>";
         }
     </script>
 </body>
